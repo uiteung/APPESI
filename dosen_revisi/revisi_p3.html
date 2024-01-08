@@ -27,48 +27,71 @@
 
       <div class="container-fluid">
         <h6 class="right-aligned" style="float: right">
-          <a href="index.html">Home</a> / <a href="">Pengajuan Sidang Proyek</a> / Proyek 3
+          <a href="index.html">Home</a> / <a href="">Revisi & Penilaian Proyek</a> / Proyek 3
         </h6>
-        <h1 class="h3 mb-3"><b>Pengajuan Sidang Proyek</b></h1>
-        <table class="table align-middle mb-0 bg-white">
-            <thead class="bg-light">
-              <tr>
-                <th>Nama & NPM</th>
-                <th>Jurusan & Kelas</th>
-                <th>Status</th>
-                <th>Penilaian</th>
-                <th>Revisi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="d-flex align-items-center">
-                    <div class="ms-3">
-                      <p class="fw-bold mb-1">Bachtiar Ramadhan</p>
-                      <p class="text-muted mb-0">1204077</p>
+        <h1 class="h3 mb-3"><b>Revisi & Penilaian Proyek</b></h1>
+
+            <div class="row justify-content-center">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row no-gutters">
+                      <label for="startDate" class="form-label">Cari Kelompok</label>
+                      <div class="col-auto date-filter" style="width: 20%">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="searchInput"
+                          placeholder="Cari" />
+                      </div>
+                    </div>
+
+                    <hr />
+                    <table
+                      id="example"
+                      class="table table-striped"
+                      style="width: 100%">
+                      <thead>
+                        <tr style="text-align: center; vertical-align: middle">
+                          <th>Nama Ketua Kelompok</th>
+                          <th>Posisi</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody id="tablebody">
+                        <!-- Isi Tabel -->
+                      </tbody>
+                      <tfoot>
+                        <tr style="text-align: center; vertical-align: middle">
+                          <th>Nama Ketua Kelompok</th>
+                          <th>Posisi</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="pagination">
+                          <button id="prevPageBtn" class="btn btn-primary">
+                            Previous
+                          </button>
+                          <span id="currentPage" class="mx-2 my-2">Halaman 1</span>
+                          <button id="nextPageBtn" class="btn btn-primary">
+                            Next
+                          </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </td>
-                <td>
-                  <p class="fw-normal mb-1">D4 Teknik Informatika</p>
-                  <p class="text-muted mb-0">4C</p>
-                </td>
-                <td>Sudah Lulus</td>
-                <td>
-                    <button type="button" class="btn btn-primary">Detail</button>
-                    <button type="button" class="btn btn-warning">Edit</button>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-primary">Detail</button>
-                    <button type="button" class="btn btn-warning">Edit</button>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
+                </div>
+              </div>
+            </div>
+          </div>
       </div>
   </div>
+  <script src="../static/revisi_p3_style.js" type="module"></script>
   <script src="../static/theme/bar/sidebar.js" type="module"></script>
   <script src="../static/theme/bar/navbar.js" type="module"></script>
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
