@@ -1,6 +1,7 @@
 // Import library dan function yang dibutukan
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue, setInner } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.0.5/croot.js";
+import { UrlCekPendaftaranSidangP3, UrlPostPendaftaranSidangP3 } from "../controller/template.js";
 import { token } from "../controller/cookies.js";
 
 var header = new Headers();
@@ -25,13 +26,9 @@ function ResponseSidangP3(value) {
 // Untuk POST Pendaftaran Sidang P3
 // Membuat function untuk mengirimkan data pendaftaran sidang p3
 function SubmitPendaftaranSidangP3() {
-    const inputNamaAnggota1 = getValue('inputNamaAnggota1');
     const inputNPMAnggota1 = getValue('inputNPMAnggota1');
-    const selectKelasAnggota1 = getValue('selectKelasAnggota1');
     const selectPosisiAnggota1 = getValue('selectPosisiAnggota1');
-    const inputNamaAnggota2 = getValue('inputNamaAnggota2');
     const inputNPMAnggota2 = getValue('inputNPMAnggota2');
-    const selectKelasAnggota2 = getValue('selectKelasAnggota2');
     const selectPosisiAnggota2 = getValue('selectPosisiAnggota2');
     const selectPembimbing = getValue('selectPembimbing');
     const inputUrlPelatihan = getValue('inputUrlPelatihan');
@@ -78,5 +75,33 @@ function SubmitPendaftaranSidangP3() {
     })
     .catch(error => {
         console.error("Error saat melakukan POST Data : ", error);
-    })
+    });
 }
+
+// Event listener tuntuk tombol "Submit Pendaftaran Sidang"
+const buttonDaftarSidangP3 = document.getElementById('');
+buttonDaftarSidangP3.addEventListener('click', () => {
+    const inputNPMAnggota1 = getValue('inputNPMAnggota1');
+    const selectPosisiAnggota1 = getValue('selectPosisiAnggota1');
+    const inputNPMAnggota2 = getValue('inputNPMAnggota2');
+    const selectPosisiAnggota2 = getValue('selectPosisiAnggota2');
+    const selectPembimbing = getValue('selectPembimbing');
+    const inputUrlPelatihan = getValue('inputUrlPelatihan');
+    const inputDaftarHadir = getValue('inputDaftarHadir');
+    const inputBuktiSubmitArtikel = getValue('inputBuktiSubmitArtikel');
+    const inputUrlGoogleBook = getValue('inputUrlGoogleBook');
+
+    if (!inputNPMAnggota1 || !selectPosisiAnggota1 || !inputNPMAnggota2 || 
+        !selectPosisiAnggota2 || !selectPembimbing || !inputUrlPelatihan ||
+        !inputDaftarHadir || !inputBuktiSubmitArtikel || !inputUrlGoogleBook) {
+            Swal.fire({
+                icon : 'warning',
+                title : 'Oops...',
+                text : 'Semua Field Harus Diisi',
+            });
+            return;
+        }
+        Swal.fire({
+            
+        })
+})
