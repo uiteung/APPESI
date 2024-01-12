@@ -102,6 +102,17 @@ buttonDaftarSidangP3.addEventListener('click', () => {
             return;
         }
         Swal.fire({
-            
-        })
-})
+            title : 'Submit Pendaftaran Sidang Proyek 3?',
+            text : 'Apakah anda yakin ingin submit pendaftaran sidang proyek 3?',
+            icon : 'question',
+            showCancelButton : true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes',
+            cancelButtonText: 'No',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                SubmitPendaftaranSidangP3();
+            }
+        });
+});
