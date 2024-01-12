@@ -64,8 +64,19 @@ function SubmitPendaftaranSidangP3() {
             Swal.fire({
                 icon : 'success',
                 title : 'Sukses!',
-                text : 'Pendaf'
+                text : 'Pendaftaran Sidang Proyek 3 Berhasil Disubmit',
+                showConfirmButton : false,
+                timer : 1500
+            })
+        } else {
+            Swal.fire({
+                icon : 'error',
+                title : 'Oops...',
+                text : 'Pendaftaran Sidang Proyek 3 Gagal Disubmit'
             })
         }
+    })
+    .catch(error => {
+        console.error("Error saat melakukan POST Data : ", error);
     })
 }
