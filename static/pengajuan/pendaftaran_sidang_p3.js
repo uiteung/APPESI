@@ -79,7 +79,7 @@ function SubmitPendaftaranSidangP3() {
 }
 
 // Event listener tuntuk tombol "Submit Pendaftaran Sidang"
-const buttonDaftarSidangP3 = document.getElementById('');
+const buttonDaftarSidangP3 = document.getElementById('buttonDaftarSidangP3');
 buttonDaftarSidangP3.addEventListener('click', () => {
     const inputNPMAnggota1 = getValue('inputNPMAnggota1');
     const selectPosisiAnggota1 = getValue('selectPosisiAnggota1');
