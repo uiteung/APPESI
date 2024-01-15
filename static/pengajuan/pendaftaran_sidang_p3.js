@@ -9,7 +9,7 @@ header.append("login", token);
 header.append("Content-Type", "application/json");
 
 // Cek Pendaftaran Sidang P3
-postWithToken(UrlCekPendaftaranSidangP3, "LOGIN", token, "test", ResponseSidangP3)
+postWithToken(UrlCekPendaftaranSidangP3, "AUTH", token, "test", ResponseSidangP3)
 
 function ResponseSidangP3(value) {
     const bgSuccess = 'alert alert-success';
