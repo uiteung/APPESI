@@ -40,14 +40,14 @@
                   <form>
                       <div class="row">
                         <!-- NPM Anggota 1 -->
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                           <div class="mb-3">
                             <label for="inputNPMAnggota1" class="form-label">NPM Anggota 1</label>
                             <input type="text" class="form-control" id="inputNPMAnggota1" placeholder="Masukkan NPM Anggota 1">
                           </div>
                         </div>
                         <!-- Kelas Anggota 1 -->
-                        <div class="col-md-4">
+                        <!-- <div class="col-md-4">
                           <div class="mb-3">
                             <label for="inputKelasAnggota1" class="form-label">Kelas Anggota 1</label>
                             <select class="form-select" id="selectKelasAnggota1">
@@ -57,9 +57,9 @@
                               <option value="3C">3C</option>
                             </select>
                           </div>
-                        </div>
+                        </div> -->
                         <!-- Posisi Anggota 1 -->
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                           <div class="mb-3">
                             <label for="selectPosisiAnggota1" class="form-label">Posisi Anggota 1</label>
                             <select class="form-select" id="selectPosisiAnggota1">
@@ -70,14 +70,14 @@
                           </div>
                         </div>
                         <!-- NPM Anggota 1 -->
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                           <div class="mb-3">
                             <label for="inputNPMAnggota2" class="form-label">NPM Anggota 2</label>
                             <input type="text" class="form-control" id="inputNPMAnggota2" placeholder="Masukkan NPM Anggota 2">
                           </div>
                         </div>
                         <!-- Kelas Anggota 2 -->
-                        <div class="col-md-4">
+                        <!-- <div class="col-md-4">
                           <div class="mb-3">
                             <label for="inputKelasAnggota2" class="form-label">Kelas Anggota 2</label>
                             <select class="form-select" id="selectKelasAnggota2">
@@ -87,9 +87,9 @@
                               <option value="3C">3C</option>
                             </select>
                           </div>
-                        </div>
+                        </div> -->
                         <!-- Posisi Anggota 2 -->
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                           <div class="mb-3">
                             <label for="selectPosisiAnggota2" class="form-label">Posisi Anggota 2</label>
                             <select class="form-select" id="selectPosisiAnggota2">
@@ -120,28 +120,28 @@
                       <!-- URL Materi Pelatihan Pengabdian Masyarakat -->
                       <div class="mb-3">
                         <label for="inputUrlPelatihan" class="form-label">URL Materi Pelatihan Pengabdian Masyarakat di <a href="https://edx.ulbi.ac.id"><i>edx.ulbi.ac.id</i></a></label>
-                        <input type="email" class="form-control" id="inputUrlPelatihan" placeholder="Masukkan URL Materi Pelatihan Pengabdian Masyarakat di edx.ulbi.ac.id">
-                        <div id="emailHelp" class="form-text">*inputkan URL nya saja</div>
+                        <input type="text" class="form-control" id="inputUrlPelatihan" placeholder="Masukkan URL Materi Pelatihan Pengabdian Masyarakat di edx.ulbi.ac.id">
+                        <div id="textHelp" class="form-text">*inputkan URL nya saja</div>
                       </div>
                       <!-- Daftar Hadir Pelatihan Pengabdian Masyarakat -->
                       <div class="mb-3">
                         <label for="inputDaftarHadir" class="form-label">Daftar Hadir Pelatihan Pengabdian Masyarakat</label>
-                        <input type="email" class="form-control" id="inputDaftarHadir" placeholder="Masukkan Daftar Hadir Pelatihan Pengabdian Masyarakat">
-                        <div id="emailHelp" class="form-text">*inputkan URL nya saja</div>
+                        <input type="text" class="form-control" id="inputDaftarHadir" placeholder="Masukkan Daftar Hadir Pelatihan Pengabdian Masyarakat">
+                        <div id="textHelp" class="form-text">*inputkan URL nya saja</div>
                       </div>
                       <!-- Bukti Submit Artikel Pengabdian Masyarakat -->
                       <div class="mb-3">
                         <label for="inputBuktiSubmitArtikel" class="form-label">Bukti Submit Artikel Pengabdian Masyarakat</label>
-                        <input type="email" class="form-control" id="inputBuktiSubmitArtikel" placeholder="Masukkan Bukti Submit Artikel Pengabdian Masyarakat">
-                        <div id="emailHelp" class="form-text">*inputkan URL nya saja</div>
+                        <input type="text" class="form-control" id="inputBuktiSubmitArtikel" placeholder="Masukkan Bukti Submit Artikel Pengabdian Masyarakat">
+                        <div id="textHelp" class="form-text">*inputkan URL nya saja</div>
                       </div>
                       <!-- URL Google Book yang sudah ber ISBN -->
                       <div class="mb-3">
                         <label for="inputUrlGoogleBook" class="form-label">URL Google Book yang sudah ber ISBN</label>
-                        <input type="email" class="form-control" id="inputUrlGoogleBook" placeholder="Masukkan URL Google Book yang sudah ber ISBN">
-                        <div id="emailHelp" class="form-text">*inputkan URL nya saja</div>
+                        <input type="text" class="form-control" id="inputUrlGoogleBook" placeholder="Masukkan URL Google Book yang sudah ber ISBN">
+                        <div id="textHelp" class="form-text">*inputkan URL nya saja</div>
                       </div>
-                    <button type="submit" class="btn btn-primary" id="buttonDaftarSidangP3">Ajukan Pendaftaran Sidang</button>
+                      <button type="submit" class="btn btn-primary" id="buttonDaftarSidangP3">Ajukan Pendaftaran Sidang</button>
                   </form>
                 </div>
               </div>
@@ -156,11 +156,6 @@
   <script src="../static/theme/bar/sidebar.js" type="module"></script>
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/js/sidebarmenu.js"></script>
-  <script src="../assets/js/app.min.js"></script>
-  <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-  <script src="../assets/libs/simplebar/dist/simplebar.js"></script>
-  <script src="../assets/js/dashboard.js"></script>
 </body>
 
 </html>
