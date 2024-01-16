@@ -27,8 +27,6 @@ CihuyDomReady(() => {
     return result.json();
     })
     .then((data) => {
-        console.log("API Response:", data); // Log the response to the console
-        console.log("Token:", token); // Log the response to the console
         if (data && Array.isArray(data.data)) {
             let tableData = "";
             data.data.forEach((item) => {
