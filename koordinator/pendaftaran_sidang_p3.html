@@ -30,53 +30,57 @@
           <a href="index.html">Home</a> / <a href="">Pengajuan Sidang Proyek</a> / Proyek 3
         </h6>
         <h1 class="h3 mb-3"><b>Daftar Kelompok Pengajuan Sidang Proyek 3</b></h1>
-        <table class="table align-middle mb-0 bg-white">
-            <thead class="bg-light">
-              <tr>
-                <th>Nama Ketua Kelompok</th>
-                <th>Kelas</th>
-                <th>URL Materi</th>
-                <th>Daftar Hadir</th>
-                <th>Bukti Submit Artikel</th>
-                <th>URL Google Book</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div class="d-flex align-items-center">
-                    <div class="ms-3">
-                      <p class="fw-bold mb-1">Bachtiar Ramadhan</p>
-                      <p class="text-muted mb-0">1204077</p>
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title fw-semibold mb-4">Pendaftaran Sidang Proyek 3</h5>
+              <div class="card">
+                <div class="card-body">
+                  <div class="table-wrapper table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr style="text-align: center; vertical-align: middle">
+                          <th><h6>NPM</h6></th>
+                          <th><h6>Kelas</h6></th>
+                          <th><h6>URL Materi</h6></th>
+                          <th><h6>Daftar Hadir</h6></th>
+                          <th><h6>Bukti Submit Artikel</h6></th>
+                          <th><h6>URL Google Book</h6></th>
+                          <th><h6>Status</h6></th>
+                        </tr>
+                        <!-- end table row-->
+                      </thead>
+                      <tbody id="tablebody">
+                        <!-- JS Data -->
+                        <!-- end table row -->
+                      </tbody>
+                    </table>
+                    <!-- end table -->
+                  </div>
+                  <!-- start Button Pagination -->
+                  <div class="row">
+                    <div class="col-md-6">
+                    <div class="pagination">
+                      <button id="prevPageBtn" class="btn btn-primary">
+                      Previous
+                      </button>
+                      <span id="currentPage" class="mx-3 mt-2
+                      ">Page 1</span>
+                      <button id="nextPageBtn" class="btn btn-primary">
+                      Next
+                      </button>
+                    </div>
                     </div>
                   </div>
-                </td>
-                <td>
-                  <p class="fw-normal mb-1">D4 Teknik Informatika</p>
-                  <p class="text-muted mb-0">4C</p>
-                </td>
-                <td>
-                    <a href="">www.google.com</a>
-                </td>
-                <td>
-                    <a href="">www.google.com</a>
-                </td>
-                <td>
-                    <a href="">www.google.com</a>
-                </td>
-                <td>
-                    <a href="">www.google.com</a>
-                </td>
-                <td>
-                    <button type="button" class="btn btn-primary">Terima</button>
-                    <button type="button" class="btn btn-danger">Tolak</button>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
+                  <!-- end Button Pagination -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+
   </div>
   <script src="../static/theme/bar/sidebar.js" type="module"></script>
   <script src="../static/theme/bar/navbar.js" type="module"></script>
