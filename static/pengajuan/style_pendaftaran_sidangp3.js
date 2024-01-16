@@ -19,4 +19,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+// Validasi Form NPM Harus diisi dengan Angka saja
+document.addEventListener("DOMContentLoaded", function () {
+    // Dapatkan elemen-elemen yang dibutuhkan
+    var npmAnggota1 = document.getElementById("inputNPMAnggota1");
+    var npmAnggota2 = document.getElementById("inputNPMAnggota2");
 
+    // Tambahkan event listener untuk validasi input NPM Anggota 1
+    npmAnggota1.addEventListener("input", function () {
+      // Hapus karakter non-angka dari nilai input
+      npmAnggota1.value = npmAnggota1.value.replace(/\D/g, "");
+    });
+
+    // Tambahkan event listener untuk validasi input NPM Anggota 2
+    npmAnggota2.addEventListener("input", function () {
+      // Hapus karakter non-angka dari nilai input
+      npmAnggota2.value = npmAnggota2.value.replace(/\D/g, "");
+    });
+  });
