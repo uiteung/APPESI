@@ -35,8 +35,8 @@ form.addEventListener('submit', (event) => {
     const inputNPMAnggota1 = getValue('inputNPMAnggota1');
     const selectPosisiAnggota1 = getValue('selectPosisiAnggota1');
     // const selectKelasAnggota1 = getValue('selectKelasAnggota1');
-    const inputNPMAnggota2 = getValue('inputNPMAnggota2');
-    const selectPosisiAnggota2 = getValue('selectPosisiAnggota2');
+    // const inputNPMAnggota2 = getValue('inputNPMAnggota2');
+    // const selectPosisiAnggota2 = getValue('selectPosisiAnggota2');
     // const selectKelasAnggota2 = getValue('selectKelasAnggota2');
     const selectPembimbing = getValue('selectPembimbing');
     const inputUrlPelatihan = getValue('inputUrlPelatihan');
@@ -45,8 +45,7 @@ form.addEventListener('submit', (event) => {
     const inputUrlGoogleBook = getValue('inputUrlGoogleBook');
 
     // Check if all required fields are filled
-    if (!inputNPMAnggota1 || !selectPosisiAnggota1 || !inputNPMAnggota2 || 
-        !selectPosisiAnggota2 || !selectPembimbing || !inputUrlPelatihan ||
+    if (!inputNPMAnggota1 || !selectPosisiAnggota1 || !selectPembimbing || !inputUrlPelatihan ||
         !inputDaftarHadir || !inputBuktiSubmitArtikel || !inputUrlGoogleBook) {
         Swal.fire({
             icon: 'warning',
@@ -119,7 +118,8 @@ function SubmitPendaftaranSidangP3() {
                 text : 'Pendaftaran Sidang Proyek 3 Berhasil Disubmit',
                 showConfirmButton : false,
                 timer : 1500
-            }).then(() => {
+            })
+            .then(() => {
                 window.location.href = 'pendaftaran_sidang_p3.html';
             })
         } else {
