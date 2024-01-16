@@ -1,12 +1,8 @@
 // Import library yang dibutuhkan
 import { CihuyDomReady, CihuyQuerySelector } from "https://c-craftjs.github.io/table/table.js";
 import { CihuyId } from "https://c-craftjs.github.io/element/element.js";
-import { token } from "../controller/cookies.js";
 import { UrlGetAllPersyaratan } from "../controller/template.js";
-
-var header = new Headers();
-header.append("AUTH", token);
-header.append("Content-Type", "application/json");
+import { token } from "../controller/cookies.js"
 
 // Get Data Program Studi
 CihuyDomReady(() => {
@@ -17,8 +13,16 @@ CihuyDomReady(() => {
     const itemPerPage = 8;
     let halamannow = 1;
 
+    const requestOptions = {
+        method: 'GET',
+        headers: {
+            'AUTH': token,
+            'Content-Type': 'application/json'
+        }
+    };
+
     // Untuk Get All Data Pendaftar
-    fetch(UrlGetAllPersyaratan)
+    fetch(UrlGetAllPersyaratan, requestOptions)
     .then((result) => {
     return result.json();
     })
