@@ -1,6 +1,6 @@
 // Import library dan function yang dibutukan
-import { postWithToken } from "https://jscroot.github.io/api/croot.js";
-import { getValue, setInner } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.0.5/croot.js";
+import { getWithHeader } from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.1/croot.js";
+import { getValue, setInner, setValue } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.0.5/croot.js";
 import { UrlCekPendaftaranSidangP3, UrlPostPendaftaranSidangP3 } from "../controller/template.js";
 import { token } from "../controller/cookies.js"
 
@@ -10,19 +10,26 @@ header.append("AUTH", token)
 header.append("Content-Type", "application/json");
 
 // // Cek Pendaftaran Sidang P3
-// postWithToken(UrlCekPendaftaranSidangP3, "AUTH", token, "test", ResponseSidangP3)
+await getWithHeader(UrlCekPendaftaranSidangP3, "AUTH", token, inputDaftarSidangP3);
 
-// function ResponseSidangP3(value) {
-//     const bgSuccess = 'alert alert-success';
+async function inputDaftarSidangP3(result) {
+    const bgSuccess = 'alert alert-success';
 
-//     if (value.data) {
-//         setInner('AlertDaftarSidang', 'Sebelum melakukan pendaftaran sidang, silahkan cek nilai matakuliah prasyaratnya <a href="">di sini</a>!');
-//         document.getElementById('AlertDaftarSidang').className = bgSuccess;
-//         console.log("Masuk ke Success value");
-//     } else {
-//         console.log(value);
-//     }
-// }
+    if (result.data) {
+        setInner('AlertDaftarSidang', 'Anda Sudah Mengisi Form Persyaratan, Tunggu Informasi Selanjutnya!');
+        document.getElementById('AlertDaftarSidang').className = bgSuccess;
+
+        setValue('inputNPMAnggota1', result.data.npm_1);
+        setValue('selectPosisiAnggota1', result.data.posisi_mhs_1);
+        setValue('inputNPMAnggota2', result.data.npm2);
+        setValue('selectPosisiAnggota2', result.data.posisi_mhs_2);
+        setValue('selectPembimbing', result.data.pembimbing);
+        setValue('inputUrlPelatihan', result.data.url_pengabdian);
+        setValue('inputDaftarHadir', result.data.daftar_hadir);
+        setValue('inputBuktiSubmitArtikel', result.data.bukti_artikel);
+        setValue('inputUrlGoogleBook', result.data.url_google_book);
+    }
+}
 
 
 // Event listener for form submission
