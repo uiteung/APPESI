@@ -3,7 +3,7 @@ import { getWithHeader } from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.1/cro
 import { UrlCekRole } from "./controller/template.js";
 
 // Untuk Atur Sidebar
-getWithHeader(UrlCekRole, "login", token, responseSidebar);
+getWithHeader(UrlCekRole, "AUTH", token, responseSidebar);
 
 function responseSidebar(result) {
     if (result.success) {
