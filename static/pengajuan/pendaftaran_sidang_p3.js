@@ -2,11 +2,11 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue, setInner } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.0.5/croot.js";
 import { UrlCekPendaftaranSidangP3, UrlPostPendaftaranSidangP3 } from "../controller/template.js";
-// import { token } from "../controller/cookies.js"
+import { token } from "../controller/cookies.js"
 
 var header = new Headers();
 // header.append("AUTH", token);
-header.append("AUTH", "v4.public.eyJleHAiOiIyMDI0LTAxLTE2VDExOjQxOjAzKzA3OjAwIiwiaWF0IjoiMjAyNC0wMS0xNlQwOTo0MTowMyswNzowMCIsImlkIjoiNjI4NTIxMzkyMTMzMSIsIm5iZiI6IjIwMjQtMDEtMTZUMDk6NDE6MDMrMDc6MDAifTZMKIURebHKzIXMRDp2YwmV99rtYUUO0dlizNpmkIXW0O3bZrtoD2_negar_KzV0sS--wo20pAXIk_7zSDbZgk")
+header.append("AUTH", token)
 header.append("Content-Type", "application/json");
 
 // // Cek Pendaftaran Sidang P3
