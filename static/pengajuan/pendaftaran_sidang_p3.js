@@ -2,10 +2,10 @@
 import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue, setInner } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.0.5/croot.js";
 import { UrlCekPendaftaranSidangP3, UrlPostPendaftaranSidangP3 } from "../controller/template.js";
-import { token } from "../controller/cookies.js";
+import { token } from "../controller/cookies.js"
 
 var header = new Headers();
-header.append("login", token);
+header.append("AUTH", token);
 header.append("Content-Type", "application/json");
 
 // // Cek Pendaftaran Sidang P3
@@ -106,18 +106,20 @@ function SubmitPendaftaranSidangP3() {
 
     fetch(UrlPostPendaftaranSidangP3, {
         method : "POST",
-        headers : header,
+        headers: header,
         body : JSON.stringify(myData)
     })
     .then(response => response.json())
     .then(data => {
-        if (data.success) {
+        if (data.status === "success") {
             Swal.fire({
                 icon : 'success',
                 title : 'Sukses!',
                 text : 'Pendaftaran Sidang Proyek 3 Berhasil Disubmit',
                 showConfirmButton : false,
                 timer : 1500
+            }).then(() => {
+                window.location.href = 'pendaftaran_sidang_p3.html';
             })
         } else {
             Swal.fire({
