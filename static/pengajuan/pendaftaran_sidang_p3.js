@@ -104,15 +104,19 @@ function SubmitPendaftaranSidangP3() {
     const myData = {
         "npm_1": inputNPMAnggota1, 
         "posisi_mhs_1": selectPosisiAnggota1, 
-        // "kelas_mhs_1" : selectKelasAnggota1,
         "npm2": inputNPMAnggota2,
         "posisi_mhs_2": selectPosisiAnggota2, 
-        // "kelas_mhs_2" : selectKelasAnggota2,
         "pembimbing": selectPembimbing, 
         "url_pengabdian": inputUrlPelatihan, 
         "daftar_hadir": inputDaftarHadir, 
         "bukti_artikel": inputBuktiSubmitArtikel, 
-        "url_google_book": inputUrlGoogleBook
+        "url_google_book": inputUrlGoogleBook,
+        "jadwal": {
+            "pengujij1": selectPembimbing,
+            "pengujij2": selectPenguji,
+            "waktu_sidang": tanggalSidang,
+            "ruangan":  "202"
+        }
     };
 
     console.log(myData);
