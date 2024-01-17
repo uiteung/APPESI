@@ -139,7 +139,7 @@ function SubmitPendaftaranSidangP3() {
                 timer : 1500
             })
             .then(() => {
-                window.location.href = 'pendaftaran_sidang_p3.html';
+                window.location.href = 'success_daftar_p3.html';
             })
         } else {
             Swal.fire({
