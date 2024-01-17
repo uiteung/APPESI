@@ -9,7 +9,7 @@ var header = new Headers();
 header.append("AUTH", token)
 header.append("Content-Type", "application/json");
 
-// // Cek Pendaftaran Sidang P3
+// Cek Pendaftaran Sidang P3
 await getWithHeader(UrlCekPendaftaranSidangP3, "AUTH", token, inputDaftarSidangP3);
 
 async function inputDaftarSidangP3(result) {
