@@ -24,8 +24,8 @@ async function inputDaftarSidangP3(result) {
         setValue('inputNPMAnggota2', result.data.npm2);
         setValue('selectPosisiAnggota2', result.data.posisi_mhs_2);
         setValue('selectPembimbing', result.data.pembimbing);
-        setValue('tanggalSidang', result.data.waktu_sidang);
-        setValue('selectPenguji', result.data.penguji2);
+        setValue('tanggalSidang', result.data.jadwal.waktu_sidang);
+        setValue('selectPenguji', result.data.jadwal.penguji2);
         setValue('inputUrlPelatihan', result.data.url_pengabdian);
         setValue('inputDaftarHadir', result.data.daftar_hadir);
         setValue('inputBuktiSubmitArtikel', result.data.bukti_artikel);
