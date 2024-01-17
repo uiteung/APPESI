@@ -21,16 +21,13 @@ async function inputDaftarSidangP3(result) {
 
         const jadwal = result.data.jadwal;
         const persyaratan = result.data.persyaratan;
-        const tanggalSidangInput = document.getElementById('tanggalSidang');
-        const waktuSidang = persyaratan.waktuSidang;
-        const formattedDate = new Date(waktuSidang).toISOString().split('T')[0];
 
         setValue('inputNPMAnggota1', persyaratan.npm_1);
         setValue('selectPosisiAnggota1', persyaratan.posisi_mhs_1);
         setValue('inputNPMAnggota2', persyaratan.npm2);
         setValue('selectPosisiAnggota2', persyaratan.posisi_mhs_2);
         setValue('selectPembimbing', persyaratan.pembimbing);
-        tanggalSidangInput.value = formattedDate;
+        // setValue('tanggalSidang', jadwal.waktuSidang);
         setValue('selectPenguji', jadwal.penguji2);
         setValue('inputUrlPelatihan', persyaratan.url_pengabdian);
         setValue('inputDaftarHadir', persyaratan.daftar_hadir);
@@ -117,10 +114,10 @@ function SubmitPendaftaranSidangP3() {
         "bukti_artikel": inputBuktiSubmitArtikel, 
         "url_google_book": inputUrlGoogleBook,
         "jadwal": {
-            "penguji1": selectPembimbing,
-            "penguji2": selectPenguji,
+            "pengujij1": selectPembimbing,
+            "pengujij2": selectPenguji,
             "waktu_sidang": tanggalSidang,
-            "ruangan":  ""
+            "ruangan":  "202"
         }
     };
 
