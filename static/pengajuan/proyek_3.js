@@ -3,9 +3,9 @@ import { UrlCekPendaftaranSidangP3 } from "../controller/template.js";
 import { token } from "../controller/cookies.js";
 
 // Cek Apakah dia sudah daftar sidang atau belum
-await getWithHeader(UrlCekPendaftaranSidangP3, "AUTH", token, cekDaftarP3);
+getWithHeader(UrlCekPendaftaranSidangP3, "AUTH", token, cekDaftarP3);
 
-async function cekDaftarP3(result) {
+function cekDaftarP3(result) {
     const linkElement = document.getElementById('buttonFormP3');
 
     if (result.data) {
