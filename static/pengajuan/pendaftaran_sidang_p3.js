@@ -114,8 +114,8 @@ function SubmitPendaftaranSidangP3() {
         "bukti_artikel": inputBuktiSubmitArtikel, 
         "url_google_book": inputUrlGoogleBook,
         "jadwal": {
-            "pengujij1": selectPembimbing,
-            "pengujij2": selectPenguji,
+            "penguji1": selectPembimbing,
+            "penguji2": selectPenguji,
             "waktu_sidang": tanggalSidang,
             "ruangan":  "202"
         }
