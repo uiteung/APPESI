@@ -48,13 +48,15 @@ form.addEventListener('submit', (event) => {
     // const selectPosisiAnggota2 = getValue('selectPosisiAnggota2');
     // const selectKelasAnggota2 = getValue('selectKelasAnggota2');
     const selectPembimbing = getValue('selectPembimbing');
+    const selectPenguji = getValue('selectPenguji');
+    const tanggalSidang = getValue('tanggalSidang');
     const inputUrlPelatihan = getValue('inputUrlPelatihan');
     const inputDaftarHadir = getValue('inputDaftarHadir');
     const inputBuktiSubmitArtikel = getValue('inputBuktiSubmitArtikel');
     const inputUrlGoogleBook = getValue('inputUrlGoogleBook');
 
     // Check if all required fields are filled
-    if (!inputNPMAnggota1 || !selectPosisiAnggota1 || !selectPembimbing || !inputUrlPelatihan ||
+    if (!inputNPMAnggota1 || !selectPosisiAnggota1 || !selectPembimbing || !selectPenguji || !tanggalSidang || !inputUrlPelatihan ||
         !inputDaftarHadir || !inputBuktiSubmitArtikel || !inputUrlGoogleBook) {
         Swal.fire({
             icon: 'warning',
@@ -92,6 +94,8 @@ function SubmitPendaftaranSidangP3() {
     const selectPosisiAnggota2 = getValue('selectPosisiAnggota2');
     // const selectKelasAnggota2 = getValue('selectKelasAnggota2');
     const selectPembimbing = getValue('selectPembimbing');
+    const selectPenguji = getValue('selectPenguji');
+    const tanggalSidang = getValue('tanggalSidang');
     const inputUrlPelatihan = getValue('inputUrlPelatihan');
     const inputDaftarHadir = getValue('inputDaftarHadir');
     const inputBuktiSubmitArtikel = getValue('inputBuktiSubmitArtikel');
