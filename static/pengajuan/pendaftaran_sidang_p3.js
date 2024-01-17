@@ -117,7 +117,7 @@ function SubmitPendaftaranSidangP3() {
             "penguji1": selectPembimbing,
             "penguji2": selectPenguji,
             "waktu_sidang": tanggalSidang,
-            "ruangan":  "202"
+            "ruangan":  ""
         }
     };
 
