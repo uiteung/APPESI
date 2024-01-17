@@ -21,13 +21,16 @@ async function inputDaftarSidangP3(result) {
 
         const jadwal = result.data.jadwal;
         const persyaratan = result.data.persyaratan;
+        const tanggalSidangInput = document.getElementById('tanggalSidang');
+        const waktuSidang = persyaratan.waktuSidang;
+        const formattedDate = new Date(waktuSidang).toISOString().split('T')[0];
 
         setValue('inputNPMAnggota1', persyaratan.npm_1);
         setValue('selectPosisiAnggota1', persyaratan.posisi_mhs_1);
         setValue('inputNPMAnggota2', persyaratan.npm2);
         setValue('selectPosisiAnggota2', persyaratan.posisi_mhs_2);
         setValue('selectPembimbing', persyaratan.pembimbing);
-        setValue('tanggalSidang', jadwal.waktuSidang);
+        tanggalSidangInput.value = formattedDate;
         setValue('selectPenguji', jadwal.penguji2);
         setValue('inputUrlPelatihan', persyaratan.url_pengabdian);
         setValue('inputDaftarHadir', persyaratan.daftar_hadir);
