@@ -19,20 +19,22 @@ async function inputDaftarSidangP3(result) {
         setInner('AlertDaftarSidang', 'Anda Sudah Mengisi Form Persyaratan, Tunggu Informasi Selanjutnya!');
         document.getElementById('AlertDaftarSidang').className = bgSuccess;
 
-        setValue('inputNPMAnggota1', result.data.npm_1);
-        setValue('selectPosisiAnggota1', result.data.posisi_mhs_1);
-        setValue('inputNPMAnggota2', result.data.npm2);
-        setValue('selectPosisiAnggota2', result.data.posisi_mhs_2);
-        setValue('selectPembimbing', result.data.pembimbing);
-        setValue('tanggalSidang', result.data.jadwal.waktuSidang);
-        setValue('selectPenguji', result.data.jadwal.penguji2);
-        setValue('inputUrlPelatihan', result.data.url_pengabdian);
-        setValue('inputDaftarHadir', result.data.daftar_hadir);
-        setValue('inputBuktiSubmitArtikel', result.data.bukti_artikel);
-        setValue('inputUrlGoogleBook', result.data.url_google_book);
+        const jadwal = result.data.jadwal;
+        const persyaratan = result.data.persyaratan;
+
+        setValue('inputNPMAnggota1', persyaratan.npm_1);
+        setValue('selectPosisiAnggota1', persyaratan.posisi_mhs_1);
+        setValue('inputNPMAnggota2', persyaratan.npm2);
+        setValue('selectPosisiAnggota2', persyaratan.posisi_mhs_2);
+        setValue('selectPembimbing', persyaratan.pembimbing);
+        setValue('tanggalSidang', jadwal.waktuSidang);
+        setValue('selectPenguji', jadwal.penguji2);
+        setValue('inputUrlPelatihan', persyaratan.url_pengabdian);
+        setValue('inputDaftarHadir', persyaratan.daftar_hadir);
+        setValue('inputBuktiSubmitArtikel', persyaratan.bukti_artikel);
+        setValue('inputUrlGoogleBook', persyaratan.url_google_book);
     }
 }
-
 
 // Event listener for form submission
 const form = document.querySelector('form');
