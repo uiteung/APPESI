@@ -10,7 +10,7 @@ CihuyDomReady(() => {
     const buttonPreviousPage = CihuyId("prevPageBtn");
     const buttonNextPage = CihuyId("nextPageBtn");
     const halamanSaatIni = CihuyId("currentPage");
-    const itemPerPage = 8;
+    const itemPerPage = 5;
     let halamannow = 1;
 
     const requestOptions = {
