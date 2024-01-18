@@ -33,6 +33,13 @@ CihuyDomReady(() => {
                 if (item.persyaratan) {
                     const values = item.persyaratan;
                     const jadwal = item.jadwal;
+
+                    // Format tanggal
+                    const waktuSidangFormatted = new Date(jadwal.waktuSidang).toLocaleDateString('en-US', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    });
                     // Your existing mapping logic here
                     tableData += `
                         <tr>
@@ -49,7 +56,7 @@ CihuyDomReady(() => {
                                 <p class="fw-bold mb-1">${jadwal.penguji2}</p>
                             </td>
                             <td>
-                                <p class="fw-bold mb-1">${jadwal.waktuSidang}</p>
+                                <p class="fw-bold mb-1">${waktuSidangFormatted}</p>
                             </td>
                         </tr>`;
                 }
