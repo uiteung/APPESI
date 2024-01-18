@@ -30,19 +30,9 @@ CihuyDomReady(() => {
         if (data && Array.isArray(data.data)) {
             let tableData = "";
             data.data.forEach((item) => {
-                if (item.persyaratan && item.persyaratan.jadwal) {
+                if (item.persyaratan) {
                     const values = item.persyaratan;
-    
-                    // Check if 'jadwal' and 'penguji2' are defined before accessing
-                    const penguji2Value = values.jadwal.penguji2 ? values.jadwal.penguji2 : '';
-    
-                    // Format tanggal
-                    const waktuSidangFormatted = new Date(values.jadwal.waktuSidang).toLocaleDateString('en-US', {
-                        year: 'numeric',
-                        month: 'long',
-                        day: 'numeric'
-                    });
-    
+                    // Your existing mapping logic here
                     tableData += `
                         <tr>
                             <td>
@@ -55,10 +45,10 @@ CihuyDomReady(() => {
                                 <p class="fw-bold mb-1">${values.pembimbing}</p>
                             </td>
                             <td>
-                                <p class="fw-bold mb-1">${penguji2Value}</p>
+                                <p class="fw-bold mb-1"></p>
                             </td>
                             <td>
-                                <p class="fw-bold mb-1">${waktuSidangFormatted}</p>
+                                <p class="fw-bold mb-1">${values.jadwal.waktuSidang}</p>
                             </td>
                         </tr>`;
                 }
