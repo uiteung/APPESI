@@ -32,6 +32,7 @@ CihuyDomReady(() => {
             data.data.forEach((item) => {
                 if (item.persyaratan) {
                     const values = item.persyaratan;
+                    const jadwal = item.jadwal;
                     // Your existing mapping logic here
                     tableData += `
                         <tr>
@@ -45,10 +46,10 @@ CihuyDomReady(() => {
                                 <p class="fw-bold mb-1">${values.pembimbing}</p>
                             </td>
                             <td>
-                                <p class="fw-bold mb-1"></p>
+                                <p class="fw-bold mb-1">${jadwal.penguji2}</p>
                             </td>
                             <td>
-                                <p class="fw-bold mb-1"></p>
+                                <p class="fw-bold mb-1">${jadwal.waktuSidang}</p>
                             </td>
                         </tr>`;
                 }
