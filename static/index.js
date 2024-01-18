@@ -21,6 +21,21 @@ CihuyDomReady(() => {
         }
     };
 
+    // Mapping NIDN ke Nama
+    const codeToNameMapping = {
+        "0420058801" : "Roni Andarsyah, S.T.,M.Kom.,SFPC",
+        "0427078401" : "Cahyo Prianto, S.Pd.,M.T.,CDSP.,SFPC",
+        "0407117405" : "M. Yusril Helmi Setyawan, S.Kom.,M.Kom.,SFPC",
+        "0410118609" : "Rolly Maulana Awangga, S.T.,MT.,CAIP,SFPC",
+        "0402058005" : "Mohamad Nurkamal Fauzan, S.T.,M.T.,SFPC",
+        "0423127804" : "Roni Habibi, S.Kom.,M.T.,SFPC",
+        "0416048803" : "Syafrial Fachri Pane,ST. M.TI.,EBDP.,CDSP.,SFPC",
+        "0402047205" : "Rd. Nuraini Siti Fatonah, S.S.,M.Hum.,SFPC",
+        "0415048901" : "Nisa Hanum Harani, S.Kom.,M.T.,CDSP.,SFPC",
+        "0415107901" : "Woro Isti Rahayu, S.T.,M.T.,SFPC",
+        "0403117607" : "Noviana Riza, S.Si.,M.T.,SFPC",
+    };
+
     // Untuk Get All Data Pendaftar
     fetch(UrlGetAllPersyaratan, requestOptions)
     .then((result) => {
@@ -40,6 +55,10 @@ CihuyDomReady(() => {
                         month: 'long',
                         day: 'numeric'
                     });
+
+                    // Function untuk ambil nama dosen dari NIDN
+                    const getNameByCode = (code) => codeToNameMapping[code] || 'Tidak Ada';
+
                     // Your existing mapping logic here
                     tableData += `
                         <tr>
@@ -50,10 +69,10 @@ CihuyDomReady(() => {
                                 <p class="fw-bold mb-1">${values.npm2}</p>
                             </td>
                             <td>
-                                <p class="fw-bold mb-1">${values.pembimbing}</p>
+                                <p class="fw-bold mb-1">${getNameByCode(values.pembimbing)}</p>
                             </td>
                             <td>
-                                <p class="fw-bold mb-1">${jadwal.penguji2}</p>
+                                <p class="fw-bold mb-1">${getNameByCode(jadwal.penguji2)}</p>
                             </td>
                             <td>
                                 <p class="fw-bold mb-1">${waktuSidangFormatted}</p>
