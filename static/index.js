@@ -50,10 +50,10 @@ CihuyDomReady(() => {
                     const jadwal = item.jadwal;
 
                     // Format tanggal
-                    const waktuSidangFormatted = new Date(jadwal.waktuSidang).toLocaleDateString('en-US', {
-                        year: 'numeric',
+                    const waktuSidangFormatted = new Date(jadwal.waktuSidang).toLocaleDateString('id-ID', {
+                        day: 'numeric',
                         month: 'long',
-                        day: 'numeric'
+                        year: 'numeric'
                     });
 
                     // Function untuk ambil nama dosen dari NIDN
