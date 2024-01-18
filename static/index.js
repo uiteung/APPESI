@@ -48,7 +48,7 @@ CihuyDomReady(() => {
                                 <p class="fw-bold mb-1"></p>
                             </td>
                             <td>
-                                <p class="fw-bold mb-1">${values.jadwal.waktuSidang}</p>
+                                <p class="fw-bold mb-1"></p>
                             </td>
                         </tr>`;
                 }
