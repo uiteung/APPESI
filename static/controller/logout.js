@@ -11,8 +11,8 @@ function logout() {
         document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     }
 
-    // Arahkan ke halaman https://pmb.ulbi.ac.id
-    window.location.href = "https://pmb.ulbi.ac.id";
+    // Arahkan ke halaman https://euis.ulbi.ac.id
+    window.location.href = "https://euis.ulbi.ac.id";
 }
 
 // Tambahkan event listener untuk mengaitkan fungsi dengan tombol logout
