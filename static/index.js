@@ -83,6 +83,16 @@ CihuyDomReady(() => {
                         </tr>`;
                 }
             });
+
+            // Menghitung banyaknya data
+            const totalData = data.data.length;
+
+            // Untuk menampilkan jumlah pengajuan sidang di html
+            const jumlahPengjuanSidangElement = CihuyId("jumlahPengjuanSidang");
+            if (jumlahPengjuanSidangElement) {
+                jumlahPengjuanSidangElement.innerText = `Jumlah Pengajuan: ${totalData}`;
+            }
+
             // Tampilkan data pegawai ke dalam tabel
             document.getElementById("tablebody").innerHTML = tableData;
     
