@@ -16,3 +16,36 @@ function cekDaftarP3(result) {
         linkElement.href = "pendaftaran_sidang_p3.html";
     }
 }
+
+// Jika klik halaman yang belum tersedia
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the button element
+    var ajukanSidangBtn = document.getElementById("buttonNilaiP3");
+
+    // Add a click event listener to the button
+    ajukanSidangBtn.addEventListener("click", function () {
+        // Display a SweetAlert
+        Swal.fire({
+            title: 'Halaman Belum Tersedia',
+            text: 'Maaf, halaman ini belum tersedia.',
+            icon: 'info',
+            confirmButtonText: 'OK'
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the button element
+    var ajukanSidangBtn = document.getElementById("buttonJadwalP3");
+
+    // Add a click event listener to the button
+    ajukanSidangBtn.addEventListener("click", function () {
+        // Display a SweetAlert
+        Swal.fire({
+            title: 'Halaman Belum Tersedia',
+            text: 'Maaf, halaman ini belum tersedia.',
+            icon: 'info',
+            confirmButtonText: 'OK'
+        });
+    });
+});
