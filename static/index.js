@@ -44,7 +44,7 @@ CihuyDomReady(() => {
     .then((data) => {
         if (data && Array.isArray(data.data)) {
             let tableData = "";
-            data.data.forEach((item) => {
+            data.data.forEach((item, index) => {
                 if (item.persyaratan) {
                     const values = item.persyaratan;
                     const jadwal = item.jadwal;
@@ -62,6 +62,9 @@ CihuyDomReady(() => {
                     // Your existing mapping logic here
                     tableData += `
                         <tr>
+                            <td>
+                                <p class="fw-bold mb-1">${index + 1}</p>
+                            </td>    
                             <td>
                                 <p class="fw-bold mb-1">${values.npm_1}</p>
                             </td>
