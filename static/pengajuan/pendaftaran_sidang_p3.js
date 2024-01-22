@@ -141,7 +141,14 @@ function SubmitPendaftaranSidangP3() {
             .then(() => {
                 window.location.href = 'success_daftarp3.html';
             })
-        } else {
+        } else if (data.status === "Dosen sudah mencapai batas maksimal sidang") {
+            Swal.fire({
+                icon : 'info',
+                title : 'Kuota Dosen Full',
+                text : 'Dosen sudah mencapai batas maksimal sidang'
+            })
+        }
+        else {
             Swal.fire({
                 icon : 'error',
                 title : 'Oops...',
