@@ -81,6 +81,9 @@ CihuyDomReady(() => {
                             <td>
                                 <p class="fw-bold mb-1">${waktuSidangFormatted}</p>
                             </td>
+                            <td>
+                                
+                            </td>
                         </tr>`;
                 }
             });
