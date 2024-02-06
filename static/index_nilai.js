@@ -71,7 +71,7 @@ CihuyDomReady(() => {
                                 <p class="fw-bold mb-1">${nilai.map(item => item.value).join(', ')}</p>
                             </td>
                             <td>
-                                <p class="fw-bold mb-1">${namaPenilai}</p>
+                                <p class="fw-bold mb-1">Action</p>
                             </td>
                         </tr>`;
                 }
