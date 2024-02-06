@@ -16,7 +16,7 @@ CihuyDomReady(() => {
     const requestOptions = {
         method: 'GET',
         headers: {
-            'AUTH': token,
+            'LOGIN': token,
             'Content-Type': 'application/json'
         }
     };
