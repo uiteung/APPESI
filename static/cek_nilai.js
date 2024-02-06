@@ -20,13 +20,14 @@ document.addEventListener('DOMContentLoaded', function () {
         "0415107901" : "Woro Isti Rahayu, S.T.,M.T.,SFPC",
         "0403117607" : "Noviana Riza, S.Si.,M.T.,SFPC",
     };
-    
+
     const btnCekNilai = document.querySelector('#btnCekNilai');
     const inputNPM = document.querySelector('#inputNPM');
+    const rataRataNilaiElement = document.querySelector('#RataRataNilai');
     
     btnCekNilai.addEventListener('click', function () {
         const npm = inputNPM.value;
-        const GetNilaiP3ByNPM = UrlGetNilaiP3ByNPM + `?npm=${npm}`
+        const GetNilaiP3ByNPM = `https://kimteungbim.ulbi.ac.id/sidang/p3/npmnilai?npm=${npm}`;
         
         const tablebody = document.getElementById("tablebody-nilai");
         const requestOptions = {
@@ -44,9 +45,16 @@ document.addEventListener('DOMContentLoaded', function () {
         .then((data) => {
             if (data && Array.isArray(data.data)) {
                 let tableData = "";
+                let totalNilai = 0;
+                let jumlahData = 0;
                 data.data.forEach((item) => {
                     if (item.nilai) {
-                        const { nim, tipe, tahun, penilai, nilai } = item;
+                        const { nilai } = item;
+                        nilai.forEach((itemNilai) => {
+                            totalNilai += itemNilai.value;
+                            jumlahData++;
+                        });
+                        const { nim, tipe, tahun, penilai } = item;
                         const getNameByCode = (code) => codeToNameMapping[code] || 'Tidak Ada';
                         tableData += `
                             <tr style="text-align: center; vertical-align: middle">
@@ -70,6 +78,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
                 tablebody.innerHTML = tableData;
+                
+                // Hitung nilai rata-rata
+                const rataRataNilai = totalNilai / jumlahData;
+                
+                // Tampilkan nilai rata-rata
+                rataRataNilaiElement.textContent = `Nilai Akhir Sidang adalah sebesar : ${rataRataNilai.toFixed(2)}`;
             } else {
                 console.error("Data or data.data is undefined or not an array.");
             }
