@@ -1,5 +1,5 @@
 // Import library yang dibutuhkan
-// import { CihuyDomReady, CihuyQuerySelector } from "https://c-craftjs.github.io/table/table.js";
+import { CihuyDomReady } from "https://c-craftjs.github.io/table/table.js";
 // import { CihuyId } from "https://c-craftjs.github.io/element/element.js";
 import { UrlGetNilaiP3ByToken } from "./controller/template.js";
 import { token } from "./controller/cookies.js"
