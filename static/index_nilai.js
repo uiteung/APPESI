@@ -47,11 +47,6 @@ CihuyDomReady(() => {
             data.data.forEach((item, index) => {
                 if (item.nilai) {
                     const { nim, tipe, tahun, nilai } = item;
-
-                    // // Function untuk ambil nama dosen dari NIDN
-                    // const getNameByCode = (code) => codeToNameMapping[code] || 'Tidak Ada';
-
-                    // Your existing mapping logic here
                     tableData += `
                         <tr>
                             <td hidden></td>
@@ -71,7 +66,7 @@ CihuyDomReady(() => {
                                 <p class="fw-bold mb-1">${nilai.map(item => item.value).join(', ')}</p>
                             </td>
                             <td>
-                                <p class="fw-bold mb-1">Action</p>
+                                <button type="button" class="btn btn-info m-1" data-nilai-npm="${nim}">Detail</button>
                             </td>
                         </tr>`;
                 }
@@ -92,6 +87,15 @@ CihuyDomReady(() => {
             // Untuk Memunculkan Pagination Halamannya
             displayData(halamannow);
             updatePagination();
+
+            // Menambahkan event listener untuk button "Detail"
+            const detailNilaiButtons = document.querySelectorAll('.btn-info');
+            detailNilaiButtons.forEach(button => {
+                button.addEventListener('click', (event) => {
+                    const _npm = event.target.getAttribute('data-nilai-npm');
+                    window.location.href = `detail_nilai_p3.html?_npm=${_npm}`;
+                })
+            })
         } else {
             console.error("Data or data.data is undefined or not an array.");
         }
