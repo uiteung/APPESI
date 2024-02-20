@@ -15,11 +15,11 @@ const getProdiByCode = (code) => codeToProdiMapping[code] || 'Tidak Ada';
 
 async function biodataMahasiswa(result) {
     if (result.data) {
-        setValue('inputNPM', data.npm);
-        setValue('inputNama', data.nama);
-        setValue('inputNPMAnggota2', data.npm2);
-        setValue('programStudi', getProdiByCode(data.Kode_Jp));
-        setValue('email', data.email);
-        setValue('noHandphone', data.phone);
+        setValue('inputNPM', result.data.npm);
+        setValue('inputNama', result.data.nama);
+        setValue('inputNPMAnggota2', result.data.npm2);
+        setValue('programStudi', getProdiByCode(result.data.Kode_Jp));
+        setValue('email', result.data.email);
+        setValue('noHandphone', result.data.phone);
     }
 }
