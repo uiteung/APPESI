@@ -17,7 +17,6 @@ async function biodataMahasiswa(result) {
     if (result.data) {
         setValue('inputNPM', result.data.npm);
         setValue('inputNama', result.data.nama);
-        setValue('inputNPMAnggota2', result.data.npm2);
         setValue('programStudi', getProdiByCode(result.data.Kode_Jp));
         setValue('email', result.data.email);
         setValue('noHandphone', result.data.phone);
