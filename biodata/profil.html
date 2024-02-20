@@ -35,36 +35,42 @@
           <div class="card">
             <div class="card-body">
                   <form>
-                      <img src="../assets/images/profile/user-1.jpg" width="200px" height="200px" class="rounded-circle">
-                      <div class="row">
-                        <!-- NPM Mahasiswa -->
-                        <div class="mb-3">
-                            <label for="inputNPM" class="form-label">NPM Mahasiswa</label>
-                            <input type="text" class="form-control" id="inputNPM" placeholder="Masukkan NPM Mahasiswa">
+                        <div class="row">
+                          <!-- Gambar Profil -->
+                          <div class="col-md-3">
+                            <img src="../assets/images/profile/user-1.jpg" width="200px" height="200px" class="rounded-circle">
+                          </div>
+                          <!-- Form Input -->
+                          <div class="col-md-9 mt-3">
+                            <div class="row">
+                              <!-- NPM Mahasiswa -->
+                              <div class="mb-3">
+                                <label for="inputNPM" class="form-label">NPM Mahasiswa</label>
+                                <input type="text" class="form-control" id="inputNPM" readonly>
+                              </div>
+                              <!-- Nama Mahasiswa -->
+                              <div class="mb-3">
+                                <label for="inputNama" class="form-label">Nama Mahasiswa</label>
+                                <input type="text" class="form-control" id="inputNama" readonly>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <!-- Nama Mahasiswa -->
-                        <div class="mb-3">
-                            <label for="inputNPM" class="form-label">Nama Mahasiswa</label>
-                            <input type="text" class="form-control" id="inputNPM" placeholder="Masukkan NPM Mahasiswa">
-                        </div>
-                      <!-- Judul Internship 2 -->
-                      <div class="mb-3">
-                        <label for="judulI2" class="form-label">Judul Internship 2</label>
-                        <input type="text" class="form-control" id="judulI2" placeholder="Masukkan Judul Internship 2">
+                      <!-- Program Studi -->
+                      <div class="mt-4 mb-3">
+                        <label for="programStudi" class="form-label">Program Studi</label>
+                        <input type="text" class="form-control" id="programStudi" readonly>
                       </div>
-                      <!-- Pengajuan Proposal Internship 2 -->
+                      <!-- Email -->
                       <div class="mb-3">
-                        <label for="inputUrlProposalI2" class="form-label">URL Pengajuan Proposal Internship 2</label>
-                        <input type="text" class="form-control" id="inputUrlProposalI2" placeholder="Masukkan URL Pengajuan Proposal Internship 2">
-                        <div id="textHelp" class="form-text">*inputkan URL nya saja</div>
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" readonly>
                       </div>
-                      <!-- Hasil Cek Plagiarisme Proposal -->
+                      <!-- Nomor Handphone -->
                       <div class="mb-3">
-                        <label for="hasilPlagiarisme" class="form-label">Hasil Cek Plagiarisme Proposal</label>
-                        <input type="text" class="form-control" id="hasilPlagiarisme" placeholder="Masukkan Hasil Cek Plagiarisme Proposal">
-                        <div id="textHelp" class="form-text">*inputkan URL nya saja</div>
+                        <label for="noHandphone" class="form-label">Nomor Handphone</label>
+                        <input type="text" class="form-control" id="noHandphone" readonly>
                       </div>
-                      <button type="submit" class="btn btn-primary" id="buttonDaftarI2">Daftar Internship</button>
                   </form>
                 </div>
               </div>
