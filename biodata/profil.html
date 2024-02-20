@@ -27,121 +27,57 @@
       <!--  Header End -->
       <!-- Content Start -->
       <div class="container-fluid">
-        <!-- Alert Start -->
-        <div class="alert alert-info" role="alert">Silahkan bagi peserta Proyek 3 untuk mengisi <b>pengajuan sidang</b> sampai dengan tanggal <b>22 Januari 2024, Pukul 23.59 WIB</b>. Jangan Sampai Terlambat!</div>
-        <!-- Alert End -->
-        <div class="card">
-          <div class="card-body d-flex flex-row justify-content-center align-items-center">
-              <img src="../assets/images/logos/appesi-icon.png" alt="" width="15%" class="mr-4">
-              <div class="text-center">
-                  <h2 class="mb-4">Selamat Datang di Dashboard Mahasiswa</h2>
-                  <h2 class="mb-4"><b>Aplikasi Pengajuan Sidang (APPESI) ULBI</b></h2>
-              </div>
-          </div>
-        </div>
-        <!-- Tabel Pengajuan Sidang -->
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Rekap Data Mahasiswa</h5>
-            <div class="card">
-              <div class="card-body">
-                <div class="table-wrapper table-responsive">
-                  <div class="table-container">
-                    <table class="table">
-                      <thead>
-                        <tr style="text-align: center; vertical-align: middle">
-                          <th hidden></th>
-                          <th><h6>No</h6></th>
-                          <th><h6>NPM Ke 1</h6></th>
-                          <th><h6>NPM Ke 2</h6></th>
-                          <th><h6>Pembimbing</h6></th>
-                          <th><h6>Penguji</h6></th>
-                          <th><h6>Tanggal Sidang</h6></th>
-                        </tr>
-                        <!-- end table row-->
-                      </thead>
-                      <tbody id="tablebody">
-                        <!-- JS Data -->
-                        <!-- end table row -->
-                      </tbody>
-                    </table>
-                  <!-- end table -->
-                  </div>
-                </div>
-                <!-- start Button Pagination -->
-                <div class="row">
-                  <div class="col-md-6">
-                  <div class="pagination">
-                    <button id="prevPageBtn" class="btn btn-primary">
-                    Previous
-                    </button>
-                    <span id="currentPage" class="mx-3 mt-2
-                    ">Page 1</span>
-                    <button id="nextPageBtn" class="btn btn-primary">
-                    Next
-                    </button>
-                  </div>
-                  </div>
-                </div>
-                <!-- end Button Pagination -->
-              </div>
-            </div>
-            <h7 class="fw-semibold" id="jumlahPengjuanSidang">Jumlah Pengajuan : </h7>
-          </div>
-        </div>
-        <!-- Cek Nilai Sidang P3 -->
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Cek Nilai Sidang</h5>
-            <div class="card">
-              <div class="card-body">
-                <!-- <h6>* Masukkan NPM untuk melihat nilai sidang</h6> -->
-                    <!-- Inputan untuk Cek Nilai Proyek -->
-                    <!-- <div class="col">
-                      <div class="input-group mb-3">
-                          <input type="text" class="form-control" id="inputNPM" placeholder="Inputkan NPM" aria-label="Inputkan NPM" aria-describedby="basic-addon2">
-                          <div class="input-group-append">
-                              <button id="btnCekNilai" class="btn btn-primary ml-2"  type="button">Cek Nilai</button>
-                          </div>
+        <h6 class="right-aligned" style="float: right">
+          <a href="index.html">Home</a> / Profil Mahasiswa
+        </h6>
+        <h1 class="h3 mb-3"><b>Profil Mahasiswa</b></h1>
+        <div class="container-fluid">
+          <div class="card">
+            <div class="card-body">
+                  <form>
+                      <img src="../assets/images/profile/user-1.jpg" width="200px" height="200px" class="rounded-circle">
+                      <div class="row">
+                        <!-- NPM Mahasiswa -->
+                        <div class="mb-3">
+                            <label for="inputNPM" class="form-label">NPM Mahasiswa</label>
+                            <input type="text" class="form-control" id="inputNPM" placeholder="Masukkan NPM Mahasiswa">
+                        </div>
+                        <!-- Nama Mahasiswa -->
+                        <div class="mb-3">
+                            <label for="inputNPM" class="form-label">Nama Mahasiswa</label>
+                            <input type="text" class="form-control" id="inputNPM" placeholder="Masukkan NPM Mahasiswa">
+                        </div>
+                      <!-- Judul Internship 2 -->
+                      <div class="mb-3">
+                        <label for="judulI2" class="form-label">Judul Internship 2</label>
+                        <input type="text" class="form-control" id="judulI2" placeholder="Masukkan Judul Internship 2">
                       </div>
-                    </div> -->
-                <div class="table-wrapper table-responsive">
-                  <div class="table-container">
-                    <table class="table">
-                      <thead>
-                        <tr style="text-align: center; vertical-align: middle">
-                          <th hidden></th>
-                          <th><h6>NPM</h6></th>
-                          <th><h6>Tipe Bimbingan</h6></th>
-                          <th><h6>Tahun Ajaran</h6></th>
-                          <th><h6>Penilai</h6></th>
-                          <th><h6>Nilai</h6></th>
-                        </tr>
-                        <!-- end table row-->
-                      </thead>
-                      <tbody id="tablebody-nilai">
-                        <!-- JS Data -->
-                        <!-- end table row -->
-                      </tbody>
-                    </table>
-                  <!-- end table -->
-                  </div>
+                      <!-- Pengajuan Proposal Internship 2 -->
+                      <div class="mb-3">
+                        <label for="inputUrlProposalI2" class="form-label">URL Pengajuan Proposal Internship 2</label>
+                        <input type="text" class="form-control" id="inputUrlProposalI2" placeholder="Masukkan URL Pengajuan Proposal Internship 2">
+                        <div id="textHelp" class="form-text">*inputkan URL nya saja</div>
+                      </div>
+                      <!-- Hasil Cek Plagiarisme Proposal -->
+                      <div class="mb-3">
+                        <label for="hasilPlagiarisme" class="form-label">Hasil Cek Plagiarisme Proposal</label>
+                        <input type="text" class="form-control" id="hasilPlagiarisme" placeholder="Masukkan Hasil Cek Plagiarisme Proposal">
+                        <div id="textHelp" class="form-text">*inputkan URL nya saja</div>
+                      </div>
+                      <button type="submit" class="btn btn-primary" id="buttonDaftarI2">Daftar Internship</button>
+                  </form>
                 </div>
               </div>
-            </div>
-            <h7 class="fw-semibold" id="RataRataNilai">Nilai Akhir Sidang adalah sebesar : </h7>
-          </div>
         </div>
-        <!-- Content End -->
       </div>
     </div>
   </div>
   <!-- <script src="static/controller/logout.js" type="module"></script> -->
   <!-- <script src="static/controller/croot.js" type="module"></script> -->
-  <script src="static/index.js" type="module"></script>
-  <script src="static/cek_nilai.js" type="module"></script>
-  <script src="static/theme/bar/navbar.js" type="module"></script>
-  <script src="static/theme/bar/sidebar.js" type="module"></script>
+  <script src="../static/index.js" type="module"></script>
+  <script src="../static/cek_nilai.js" type="module"></script>
+  <script src="../static/theme/bar/navbar.js" type="module"></script>
+  <script src="../static/theme/bar/sidebar.js" type="module"></script>
   <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
   <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/js/sidebarmenu.js"></script>
