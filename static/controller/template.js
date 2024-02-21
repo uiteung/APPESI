@@ -11,3 +11,4 @@ export let UrlGetBiodataByToken = "https://kimteungbim.ulbi.ac.id/p1/mhs/bio";
 
 // Endpoint POST
 export let UrlPostPendaftaranSidangP3 = "https://p3-be.ulbi.ac.id/api/sidang/syarat";
+export let UrlPostPendafaranP1 = "http://kimteungbim.ulbi.ac.id/p1/nilai";
