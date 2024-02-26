@@ -18,7 +18,25 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('buttonDaftar').addEventListener('click', function(event) {
         // Menghentikan perilaku default form
         event.preventDefault();
-        
+
+        // Menampilkan alert konfirmasi
+        Swal.fire({
+            title: 'Konfirmasi',
+            text: 'Apakah Anda yakin ingin melakukan pendaftaran?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Ya',
+            cancelButtonText: 'Tidak'
+        }).then((result) => {
+            // Jika pengguna menekan tombol "Ya", lanjutkan pendaftaran
+            if (result.isConfirmed) {
+                continueRegistration();
+            }
+        });
+    });
+    
+    // Function untuk melanjutkan proses pendaftaran
+    function continueRegistration() {
         // Mendapatkan nilai yang dipilih dari dropdown
         var selectedValue = document.getElementById('selectTipeBimbingan').value;
         
@@ -78,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .catch(error => {
             console.error('Error:', error.message);
         });
-    });
+    }
     
     // Function untuk mendapatkan data formulir sesuai dengan tipe bimbingan yang dipilih
     function getFormData(selectedValue) {
