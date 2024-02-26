@@ -14,3 +14,4 @@ export let UrlGetAllPengajuanByNIDN = "https://kimteungbim.ulbi.ac.id/p1/dosen/p
 // Endpoint POST
 export let UrlPostPendaftaranSidangP3 = "https://p3-be.ulbi.ac.id/api/sidang/syarat";
 export let UrlPostPendafaranP1 = "http://kimteungbim.ulbi.ac.id/p1/pengajuan";
+export let UrlPostPendaftaranI2 = "https://kimteungbim.ulbi.ac.id/i2/pengajuan";
