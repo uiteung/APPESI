@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
         fetch(formAction, {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'LOGIN': token
             },
             body: JSON.stringify(getFormData(selectedValue))
         })
