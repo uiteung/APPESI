@@ -22,7 +22,6 @@ document.getElementById("selectTipeBimbingan").addEventListener("change", functi
     // Jika opsi yang dipilih adalah "Tugas Akhir", tampilkan input pembimbing 2
     if (selectedValue === "ta" || selectedValue === "i2") {
       document.getElementById("selectPembimbing2").parentNode.removeAttribute("hidden");
-      document.getElementById("inputNPMAnggota2").parentNode.setAttribute("hidden");
     } else {
       // Sembunyikan input pembimbing 2 jika opsi yang dipilih bukan "Tugas Akhir"
       document.getElementById("selectPembimbing2").parentNode.setAttribute("hidden", "true");
