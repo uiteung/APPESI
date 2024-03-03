@@ -18,12 +18,17 @@ document.getElementById("selectTipeBimbingan").addEventListener("change", functi
   
     // Mengubah teks judul sesuai dengan nilai dropdown yang dipilih
     titleElement.innerText = "Pendaftaran " + titleMap[selectedValue];
-  
-    // Jika opsi yang dipilih adalah "Tugas Akhir", tampilkan input pembimbing 2
-    if (selectedValue === "ta") {
-      document.getElementById("selectPembimbing2").parentNode.removeAttribute("hidden");
-    } else {
-      // Sembunyikan input pembimbing 2 jika opsi yang dipilih bukan "Tugas Akhir"
+
+    if (selectedValue === 'i2' || selectedValue === 'ta') {
+      document.getElementById("inputNPMAnggota2").disabled = true;
+      if (selectedValue === 'ta') {
+          document.getElementById("selectPembimbing2").parentNode.removeAttribute("hidden");
+      } else {
+          document.getElementById("selectPembimbing2").parentNode.setAttribute("hidden", "true");
+      }
+  } else {
+      // Jika selectedValue tidak sama dengan 'i2' atau 'ta', pastikan textbox diaktifkan dan elemen selectPembimbing2 disembunyikan
+      document.getElementById("inputNPMAnggota2").disabled = false;
       document.getElementById("selectPembimbing2").parentNode.setAttribute("hidden", "true");
-    }
+  }
 });
