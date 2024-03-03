@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!response.ok) {
                 Swal.fire({
                     title: 'Oops...',
-                    text: 'Gagal melakukan pendaftaran.',
+                    text: 'Gagal melakukan pendaftaran. Silahkan hubungi wa.me/+6289687960500',
                     icon: 'error'
                 })
             }
