@@ -1,6 +1,6 @@
 import { getWithHeader } from "https://cdn.jsdelivr.net/gh/jscroot/api@0.0.1/croot.js";
 import { setValue } from "https://cdn.jsdelivr.net/gh/jscroot/element@0.0.5/croot.js";
-import { UrlGetBiodataByToken, UrlPostPendafaranP1, UrlPostPendaftaranI2, UrlPostPendaftaranTA } from "../controller/template.js";
+import { UrlGetBiodataByToken, UrlPostPendafaranP1, UrlPostPendaftaranI2, UrlPostPendaftaranTA, UrlGetSyarati2 } from "../controller/template.js";
 import { token } from "../controller/cookies.js";
 
 // Untuk inputin data mahasiswa ke inputan secara otomatis
@@ -9,6 +9,35 @@ await getWithHeader(UrlGetBiodataByToken, "LOGIN", token, biodataMahasiswa);
 async function biodataMahasiswa(result) {
     if (result.data) {
         setValue('inputNPMAnggota1', result.data.npm);
+    }
+}
+
+// Mengubah teks judul sesuai dengan nilai dropdown yang dipilih
+document.getElementById("selectTipeBimbingan").addEventListener("change", async function() {
+    // Mendapatkan nilai terpilih dari dropdown
+    var selectedValue = this.value;
+    
+    // Membuat objek map untuk menghubungkan nilai dropdown dengan judul yang sesuai
+    var titleMap = {
+      "p1": "Proyek 1",
+      "p2": "Proyek 2",
+      "p3": "Proyek 3",
+      "i1": "Internship 1",
+      "i2": "Internship 2",
+      "ta": "Tugas Akhir"
+    };
+  
+    // Mengubah teks judul sesuai dengan nilai dropdown yang dipilih
+    titleElement.innerText = "Pendaftaran " + titleMap[selectedValue];
+
+    if (selectedValue === 'i2' || selectedValue === 'ta') {
+      await getWithHeader(UrlGetSyarati2, "LOGIN", token, matkulReq);
+    }
+});
+
+async function matkulReq(result) {
+    if (!result.success) {
+        document.getElementById("form-body").parentNode.setAttribute("hidden", "true");
     }
 }
 
