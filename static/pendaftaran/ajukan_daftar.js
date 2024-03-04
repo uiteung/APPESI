@@ -39,9 +39,10 @@ async function matkulReq(result) {
     if (!result.success) {
         document.getElementById("form-body").parentNode.setAttribute("hidden", "true");
         Swal.fire({
-            title: 'Oops...',
-            html: 'Anda belum memenuhi syarat untuk mengikuti Internship 2. <br><br><br> <small>Jika menurut anda terjadi kesalahan, Silahkan hubungi Admin DTI <a href="https://wa.me/+6289687960500">disini</a></small>',
-            icon: 'error',
+            icon: "error",
+            title: "Aduh...",
+            html: "Anda belum memenuhi syarat untuk mengikuti Internship 2.",
+            footer: '<small>Jika menurut anda terjadi kesalahan, Silahkan hubungi Admin DTI <a href="https://wa.me/+6289687960500">disini</a></small>',
             showCloseButton: true,
             allowOutsideClick: false,
             allowEscapeKey: false
