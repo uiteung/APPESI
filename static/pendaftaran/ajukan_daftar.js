@@ -54,23 +54,37 @@ async function matkulReq(result) {
 document.addEventListener('DOMContentLoaded', function() {
     // Mendengarkan event submit pada form
     document.getElementById('buttonDaftar').addEventListener('click', function(event) {
-        // Menghentikan perilaku default form
+        // Prevent default form behavior
         event.preventDefault();
-
-        // Menampilkan alert konfirmasi
-        Swal.fire({
-            title: 'Konfirmasi',
-            text: 'Apakah Anda yakin ingin melakukan pendaftaran?',
-            icon: 'question',
-            showCancelButton: true,
-            confirmButtonText: 'Ya',
-            cancelButtonText: 'Tidak'
-        }).then((result) => {
-            // Jika pengguna menekan tombol "Ya", lanjutkan pendaftaran
-            if (result.isConfirmed) {
-                continueRegistration();
-            }
-        });
+    
+        // Get the selected values of both selectors
+        const DosPem1 = document.getElementById('selectPembimbing1').value;
+        const DosPem2 = document.getElementById('selectPembimbing2').value;
+    
+        // Check if both selected values are the same
+        if (DosPem1 === DosPem2) {
+            // Show an error message if the selected values are the same
+            Swal.fire({
+                title: 'Oops...',
+                text: 'Dosen Pembimbing 1 dan 2 tidak boleh sama!',
+                icon: 'error'
+            });
+        } else {
+            // Show a confirmation dialog
+            Swal.fire({
+                title: 'Konfirmasi',
+                text: 'Apakah Anda yakin ingin melakukan pendaftaran?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Tidak'
+            }).then((result) => {
+                // If the user confirms, proceed with the registration
+                if (result.isConfirmed) {
+                    continueRegistration();
+                }
+            });
+        }
     });
     
     // Function untuk melanjutkan proses pendaftaran
