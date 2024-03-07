@@ -22,6 +22,7 @@ document.getElementById("selectTipeBimbingan").addEventListener("change", functi
     if (selectedValue === 'i2' || selectedValue === 'ta') {
       document.getElementById("inputNPMAnggota2").disabled = true;
       document.getElementById("selectPembimbing2").parentNode.removeAttribute("hidden");
+      document.getElementById("hasilPlagiarisme").parentNode.removeAttribute("hidden");
   } else {
       // Jika selectedValue tidak sama dengan 'i2' atau 'ta', pastikan textbox diaktifkan dan elemen selectPembimbing2 disembunyikan
       document.getElementById("inputNPMAnggota2").disabled = false;
